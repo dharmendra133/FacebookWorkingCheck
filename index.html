@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Simple Working of Facebook using JS</title>
+</head>
+<body>
+	<script type="text/javascript">
+		let database=[
+		{
+			username:'dharmendra',
+			password:'sah',
+		}
+
+		];
+
+		let status=[
+		{
+			name:'Dharmendra sah',
+			status:'I want remote job',
+		},
+		{
+			name:'dharmendra kumar sah',
+			status:'I want remote job anyhow',
+		}
+
+		];
+		
+
+		const username=prompt('Enter your username');
+		const password=prompt('Enter your password');
+
+		
+		const login=(user,pass)=>{
+
+			if(user===database[0].username && pass===database[0].password){
+				// console.log(status);
+				for(let value of status){
+					console.log(value);
+				}
+
+			}else{
+				// console.log("Username or password is wrong");
+				alert("Username or Password is wrong");
+			}
+		}
+		login(username,password);
+
+
+	</script>
+</body>
+</html>
